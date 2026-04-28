@@ -1,8 +1,8 @@
 {
   "$schema": "https://openapi.vercel.sh/vercel.json",
-  "buildCommand": "pnpm build:client",
+  "buildCommand": "npm run build:client",
   "outputDirectory": "dist/public",
-  "installCommand": "corepack enable && NPM_CONFIG_PRODUCTION=false pnpm install --no-frozen-lockfile",
+  "installCommand": "npm install --legacy-peer-deps",
   "framework": null,
   "regions": ["fra1"],
   "functions": {
