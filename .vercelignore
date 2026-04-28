@@ -1,0 +1,11 @@
+# Dev-only stuff that shouldn't be uploaded to Vercel
+.manus-logs/
+.webdev/
+client/public/__manus__/
+patches/wouter@3.7.1.patch.unused
+test/
+*.test.ts
+SEO-GUIDE.md
+ideas.md
+README-RENDER.md
+README-VERCEL.md

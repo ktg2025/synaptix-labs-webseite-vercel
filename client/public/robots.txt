@@ -1,0 +1,22 @@
+# Synaptix Labs - robots.txt for search engine crawlers
+
+# Allow all bots
+User-agent: *
+Allow: /
+Disallow: /admin
+Disallow: /api
+Disallow: /.env
+Disallow: /.git
+
+# Specific rules for Google
+User-agent: Googlebot
+Allow: /
+Crawl-delay: 1
+
+# Specific rules for Bing
+User-agent: Bingbot
+Allow: /
+Crawl-delay: 1
+
+# Sitemap location
+Sitemap: https://synaptixlabs.manus.space/sitemap.xml

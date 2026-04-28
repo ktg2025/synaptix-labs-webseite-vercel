@@ -1,0 +1,27 @@
+{
+  "$schema": "https://openapi.vercel.sh/vercel.json",
+  "buildCommand": "pnpm build:client",
+  "outputDirectory": "dist/public",
+  "installCommand": "corepack enable && NPM_CONFIG_PRODUCTION=false pnpm install --no-frozen-lockfile",
+  "framework": null,
+  "regions": ["fra1"],
+  "functions": {
+    "api/index.ts": {
+      "maxDuration": 30
+    }
+  },
+  "rewrites": [
+    {
+      "source": "/api/(.*)",
+      "destination": "/api/index"
+    },
+    {
+      "source": "/manus-storage/(.*)",
+      "destination": "/api/index"
+    },
+    {
+      "source": "/((?!.*\\.).*)",
+      "destination": "/index.html"
+    }
+  ]
+}
